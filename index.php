@@ -46,19 +46,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="stylef.css">
 </head>
 <body>
-    <h2>Login Cafe Saya</h2>
-    <form method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <button type="submit">Sign In</button>
-    </form>
+<div class="box">
+        <span class="borderLine"></span>
+        <form method="POST" action="">
+            <div class="inputBox">
+                <h2>LOGIN</h2>
+                <input type="text" name="username" required="required">
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" name="password" required="required">
+                <span>Password</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="#">Lupa Password</a>
+                <a href="#">Daftar</a>
+            </div>
+            <input type="submit" value="Login">
+        </form>
+    </div>
     <?php if (isset($error)): ?>
         <p><?php echo $error; ?></p>
     <?php endif; ?>
